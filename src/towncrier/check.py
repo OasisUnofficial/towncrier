@@ -77,7 +77,7 @@ def __main(comparewith, directory, config):
         click.echo("{}. {}".format(n, f))
     click.echo()
 
-    if len(files) == 1 and files.pop() == os.path.join(base_directory, config["filename"]):
+    if len(files) == 1 and list(files)[0] == os.path.join(base_directory, config["filename"]):
         click.echo("Only the configured news file has changed.")
         sys.exit(0)
 
